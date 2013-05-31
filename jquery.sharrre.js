@@ -119,7 +119,7 @@
     googlePlus : function(self){
       var sett = self.options.buttons.googlePlus;
       //$(self.element).find('.buttons').append('<div class="button googleplus"><g:plusone size="'+self.options.buttons.googlePlus.size+'" href="'+self.options.url+'"></g:plusone></div>');
-      $(self.element).find('.buttons').append('<div class="button googleplus"><div class="g-plusone" data-size="'+sett.size+'" data-href="'+(sett.url !== '' ? sett.url : self.options.url)+'" data-annotation="'+sett.annotation+'"></div></div>');
+      $(self.element).find('.buttons').append('<div class="button googleplus"><div class="g-plusone" data-size="'+_h(sett.size)+'" data-href="'+_h(sett.url !== '' ? sett.url : self.options.url)+'" data-annotation="'+_h(sett.annotation)+'"></div></div>');
       window.___gcfg = {
         lang: self.options.buttons.googlePlus.lang
       };
@@ -138,7 +138,7 @@
     },
     facebook : function(self){
       var sett = self.options.buttons.facebook;
-      $(self.element).find('.buttons').append('<div class="button facebook"><div id="fb-root"></div><div class="fb-like" data-href="'+(sett.url !== '' ? sett.url : self.options.url)+'" data-send="'+sett.send+'" data-layout="'+sett.layout+'" data-width="'+sett.width+'" data-show-faces="'+sett.faces+'" data-action="'+sett.action+'" data-colorscheme="'+sett.colorscheme+'" data-font="'+sett.font+'" data-via="'+sett.via+'"></div></div>');
+      $(self.element).find('.buttons').append('<div class="button facebook"><div id="fb-root"></div><div class="fb-like" data-href="'+_h(sett.url !== '' ? sett.url : self.options.url)+'" data-send="'+_h(sett.send)+'" data-layout="'+_h(sett.layout)+'" data-width="'+_h(sett.width)+'" data-show-faces="'+_h(sett.faces)+'" data-action="'+_h(sett.action)+'" data-colorscheme="'+_h(sett.colorscheme)+'" data-font="'+_h(sett.font)+'" data-via="'+_h(sett.via)+'"></div></div>');
       var loading = 0;
       if(typeof FB === 'undefined' && loading == 0){
         loading = 1;
@@ -146,7 +146,7 @@
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) {return;}
           js = d.createElement(s); js.id = id;
-          js.src = '//connect.facebook.net/'+sett.lang+'/all.js#xfbml=1';
+          js.src = '//connect.facebook.net/'+sett.lang+'/all.js#xfbml=1'; // TODO:
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
       }
@@ -156,7 +156,7 @@
     },
     twitter : function(self){
       var sett = self.options.buttons.twitter;
-      $(self.element).find('.buttons').append('<div class="button twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="'+(sett.url !== '' ? sett.url : self.options.url)+'" data-count="'+sett.count+'" data-text="'+self.options.text+'" data-via="'+sett.via+'" data-hashtags="'+sett.hashtags+'" data-related="'+sett.related+'" data-lang="'+sett.lang+'">Tweet</a></div>');
+      $(self.element).find('.buttons').append('<div class="button twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="'+_h(sett.url !== '' ? sett.url : self.options.url)+'" data-count="'+_h(sett.count)+'" data-text="'+_h(self.options.text)+'" data-via="'+_h(sett.via)+'" data-hashtags="'+_h(sett.hashtags)+'" data-related="'+_h(sett.related)+'" data-lang="'+_h(sett.lang)+'">Tweet</a></div>');
       var loading = 0;
       if(typeof twttr === 'undefined' && loading == 0){
         loading = 1;
@@ -175,7 +175,7 @@
     },
     digg : function(self){
       var sett = self.options.buttons.digg;
-      $(self.element).find('.buttons').append('<div class="button digg"><a class="DiggThisButton '+sett.type+'" rel="nofollow external" href="http://digg.com/submit?url='+encodeURIComponent((sett.url !== '' ? sett.url : self.options.url))+'"></a></div>');
+      $(self.element).find('.buttons').append('<div class="button digg"><a class="DiggThisButton '+_h(sett.type)+'" rel="nofollow external" href="http://digg.com/submit?url='+encodeURIComponent((sett.url !== '' ? sett.url : self.options.url))+'"></a></div>');
       var loading = 0;
       if(typeof __DBW === 'undefined' && loading == 0){
         loading = 1;
@@ -215,7 +215,7 @@
     },
     stumbleupon : function(self){
       var sett = self.options.buttons.stumbleupon;
-      $(self.element).find('.buttons').append('<div class="button stumbleupon"><su:badge layout="'+sett.layout+'" location="'+(sett.url !== '' ? sett.url : self.options.url)+'"></su:badge></div>');
+      $(self.element).find('.buttons').append('<div class="button stumbleupon"><su:badge layout="'+_h(sett.layout)+'" location="'+_h(sett.url !== '' ? sett.url : self.options.url)+'"></su:badge></div>');
       var loading = 0;
       if(typeof STMBLPN === 'undefined' && loading == 0){
         loading = 1;
@@ -237,7 +237,7 @@
     },
     linkedin : function(self){
       var sett = self.options.buttons.linkedin;
-      $(self.element).find('.buttons').append('<div class="button linkedin"><script type="in/share" data-url="'+(sett.url !== '' ? sett.url : self.options.url)+'" data-counter="'+sett.counter+'"></script></div>');
+      $(self.element).find('.buttons').append('<div class="button linkedin"><script type="in/share" data-url="'+_h(sett.url !== '' ? sett.url : self.options.url)+'" data-counter="'+_h(sett.counter)+'"></script></div>');
       var loading = 0;
       if(typeof window.IN === 'undefined' && loading == 0){
         loading = 1;
@@ -253,7 +253,7 @@
     },
     pinterest : function(self){
       var sett = self.options.buttons.pinterest;
-      $(self.element).find('.buttons').append('<div class="button pinterest"><a href="http://pinterest.com/pin/create/button/?url='+(sett.url !== '' ? sett.url : self.options.url)+'&media='+sett.media+'&description='+sett.description+'" class="pin-it-button" count-layout="'+sett.layout+'">Pin It</a></div>');
+      $(self.element).find('.buttons').append('<div class="button pinterest"><a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(sett.url !== '' ? sett.url : self.options.url)+'&media='+encodeURIComponent(sett.media)+'&description='+encodeURIComponent(sett.description)+'" class="pin-it-button" count-layout="'+_h(sett.layout)+'">Pin It</a></div>');
 
       (function() {
         var li = document.createElement('script');li.type = 'text/javascript';li.async = true;
@@ -343,6 +343,13 @@
       window.open('http://pinterest.com/pin/create/button/?url='+encodeURIComponent((opt.buttons.pinterest.url !== '' ? opt.buttons.pinterest.url : opt.url))+'&media='+encodeURIComponent(opt.buttons.pinterest.media)+'&description='+opt.buttons.pinterest.description, 'pinterest', 'toolbar=no,width=700,height=300');
     }
   };
+
+  function _h( url ){
+    if ( url ) {
+      return url.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/'/g,"&#039;").replace(/</g,"&lt;").replace(/>/g,"&gt;") ;
+    }
+    return "";
+  }
 
   /* Plugin constructor
   ================================================== */
@@ -510,7 +517,7 @@
     else{ //template by defaults
       $(this.element).html(
                             '<div class="box"><a class="count" href="#">' + total + '</a>' + 
-                            (this.options.title !== '' ? '<a class="share" href="#">' + this.options.title + '</a>' : '') +
+                            (this.options.title !== '' ? '<a class="share" href="#">' + _h(this.options.title) + '</a>' : '') +
                             '</div>'
                           );
     }
